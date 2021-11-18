@@ -4,3 +4,5 @@ let shapes = [
     { color: 'red', width: 4, height: 13 },
     { color: 'white', width: 23, height: 34 }
 ]
+
+const and = (func_1, func_2) => value => func_1(value) && func_2(value);
