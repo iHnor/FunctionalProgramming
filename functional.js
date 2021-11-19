@@ -20,3 +20,8 @@ const isSquare = figure => figure.width == figure.height;
 const isRectangle = figure => figure.width != figure.height;
 
 const calcArea = figure => figure.width * figure.height;
+const calcPerimeter = figure => (figure.width + figure.height) * 2;
+
+const add = (a, b) => a + b;
+const max = list => list.reduce((a, b) => Math.max(a, b));
+const sum = list => list.reduce(add, 0);
