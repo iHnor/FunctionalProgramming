@@ -13,3 +13,5 @@ const and = (func_1, func_2) => value => func_1(value) && func_2(value);
 const or = (func_1, func_2) => value => func_1(value) || func_2(value);
 const all = list => list.reduce((func_1, func_2) => value => func_1(value) && func_2(value));
 const any = list => list.reduce((func_1, func_2) => value => func_1(value) || func_2(value));
+
+const hasColor = c => figure => figure.color == c;
