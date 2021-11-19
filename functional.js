@@ -31,3 +31,12 @@ const reduce = (func, value) => list => list.reduce(func, value);
 const filter = func => figures => figures.filter(func);
 
 const flow = (...listValue) => value => listValue.reduce((accumulator, func) => func(accumulator), value);
+
+
+let Red = 'red';
+let sumOfPerimetersRedRectangles = flow(
+    filter(and(hasColor(Red), isRectangle)),
+    map(calcPerimeter),
+    sum
+)(shapes);
+console.log("Perimeter sums", sumOfPerimetersRedRectangles);
