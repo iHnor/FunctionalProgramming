@@ -40,3 +40,12 @@ let sumOfPerimetersRedRectangles = flow(
     sum
 )(shapes);
 console.log("Perimeter sums", sumOfPerimetersRedRectangles);
+
+
+let Black = 'black';
+let maxAreaFromAllBlackSquare = flow(
+    filter(and(hasColor(Black), isSquare)),
+    map(calcArea),
+    max
+)(shapes)
+console.log("Max area", maxAreaFromAllBlackSquare);
