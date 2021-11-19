@@ -17,4 +17,6 @@ const any = list => list.reduce((func_1, func_2) => value => func_1(value) || fu
 const hasColor = c => figure => figure.color == c;
 
 const isSquare = figure => figure.width == figure.height;
+const isRectangle = figure => figure.width != figure.height;
+
 const calcArea = figure => figure.width * figure.height;
