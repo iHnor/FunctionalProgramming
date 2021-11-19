@@ -25,3 +25,7 @@ const calcPerimeter = figure => (figure.width + figure.height) * 2;
 const add = (a, b) => a + b;
 const max = list => list.reduce((a, b) => Math.max(a, b));
 const sum = list => list.reduce(add, 0);
+
+const map = value => list => list.map(value);
+const reduce = (func, value) => list => list.reduce(func, value);
+const filter = func => figures => figures.filter(func);
