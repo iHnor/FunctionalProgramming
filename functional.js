@@ -29,3 +29,5 @@ const sum = list => list.reduce(add, 0);
 const map = value => list => list.map(value);
 const reduce = (func, value) => list => list.reduce(func, value);
 const filter = func => figures => figures.filter(func);
+
+const flow = (...listValue) => value => listValue.reduce((accumulator, func) => func(accumulator), value);
