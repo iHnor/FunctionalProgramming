@@ -15,7 +15,6 @@ const all = list => list.reduce((func_1, func_2) => value => func_1(value) && fu
 const any = list => list.reduce((func_1, func_2) => value => func_1(value) || func_2(value));
 
 const hasColor = c => figure => figure.color == c;
-
 const isSquare = figure => figure.width == figure.height;
 const isRectangle = figure => figure.width != figure.height;
 
@@ -30,7 +29,7 @@ const map = value => list => list.map(value);
 const reduce = (func, value) => list => list.reduce(func, value);
 const filter = func => figures => figures.filter(func);
 
-const flow = (...listValue) => value => listValue.reduce((accumulator, func) => func(accumulator), value);
+const flow = (...listValue) => value => listValue.reduce((acc , func) => func(acc), value);
 
 
 let Red = 'red';
