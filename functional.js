@@ -28,7 +28,7 @@ const map = projection => list => list.map(projection);
 const reduce = (reducer, initValue) => list => list.reduce(reducer, initValue);
 
 const and = (p1, p2) => value => p1(value) && p2(value);
-const or = (func_1, func_2) => value => func_1(value) || func_2(value);
+const or = (p1, p2) => value => p1(value) || p2(value);
 const all = argsToArray(reduce(and));
 const any = argsToArray(reduce(or));
 
@@ -46,7 +46,7 @@ const sum = reduce(add, 0)
 const flow = (...steps) => value => steps.reduce((result , step) => step(result), value);
 const combine = (...listValue) => value => listValue.reduceRight((acc , func) => func(acc), value);
 const combineFlow = (...steps) => flow(...steps.reverse());
-
+  
 let Red = 'red';
 let sumOfPerimetersRedRectangles = flow(
     filter(and(hasColor(Red), isRectangle)),
