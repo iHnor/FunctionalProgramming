@@ -11,7 +11,8 @@ let shapes = [
 
 const and = (func_1, func_2) => value => func_1(value) && func_2(value);
 const or = (func_1, func_2) => value => func_1(value) || func_2(value);
-const all = list => list.reduce((func_1, func_2) => value => func_1(value) && func_2(value));
+const all = argsToArray(reduce(and));
+const any = argsToArray(reduce(or));
 const any = list => list.reduce((func_1, func_2) => value => func_1(value) || func_2(value));
 
 const hasColor = c => figure => figure.color == c;
